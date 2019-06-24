@@ -30,7 +30,9 @@
          
    eventBus功能探索      
    1、子类订阅者注册到时间总线，当向总线发送消息，父类的订阅者也会处理事件消息
+   
    2、不同类型的参数。eventBus会根据Listener的参数类型的不同，分别向不同的Subscribe发送不同的消息
+   
    3、当作为参数的event之间有继承关系时，使用eventBus发送消息，eventt的父类listener也会对此消息进行处理。
    
    订阅者是按方法的粒度，之说以这样讲，应为@Subscribe应用在方法上
