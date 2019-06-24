@@ -3,6 +3,7 @@ package com.java.guava_event_bus.configuration;
 import com.google.common.eventbus.AsyncEventBus;
 import com.google.common.eventbus.EventBus;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -70,6 +71,7 @@ public class MyConfiguration {
      * 异步eventBus
      * @return
      */
+    //@ConditionalOnMissingBean
     @Bean(name = "asyncEvent2Bus")
     public AsyncEventBus asyncEvent2Bus() {
         return new AsyncEventBus("asyncEvent2Bus",executorService);

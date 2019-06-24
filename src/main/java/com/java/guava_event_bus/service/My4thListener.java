@@ -10,14 +10,14 @@ import javax.annotation.PostConstruct;
 
 @Slf4j
 @Service
-public class MySecondService {
+public class My4thListener {
 
     @Autowired
-    private AsyncEventBus asyncEventBus;
+    private AsyncEventBus asyncEvent2Bus;
 
     @PostConstruct
     public void initialize() {
-        asyncEventBus.register(this);
+        asyncEvent2Bus.register(this);
     }
 
     @Subscribe
